@@ -4,7 +4,7 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
-#include "utils/load_data.h"
+#include "../utils/load_data.h"
 using namespace std;
 
 // function to swap elements
@@ -71,7 +71,8 @@ void quickSort(int array[], int low, int high) {
 // Driver code
 int main() {
   std::vector<int> numeros;
-  numeros = readFileCsv();
+  string nombreArchivo = "../data/1000.csv";
+  numeros = readFileCsv(nombreArchivo);
   int longitud = numeros.size();
  
   int data[longitud];

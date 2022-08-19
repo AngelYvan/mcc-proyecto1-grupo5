@@ -1,5 +1,8 @@
-from utils.load_data import readFileCsv
 
+import sys
+sys.path.append('..\\')
+print(sys.path)
+from utils.load_data import readFileCsv
 # Quick sort in Python
 
 # function to find the partition position
@@ -44,7 +47,7 @@ def quickSort(array, low, high):
     quickSort(array, pi + 1, high)
 
 # data = [8, 7, 2, 1, 0, 9, 6]
-data = readFileCsv('data/1000.csv')
+data = readFileCsv('../data/1000.csv')
 print("Unsorted Array")
 print(data)
 
