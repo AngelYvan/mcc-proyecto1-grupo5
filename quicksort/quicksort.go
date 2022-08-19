@@ -11,13 +11,16 @@ import (
 )
 
 func main() {
-	slice := readFile("data/20000.csv")
+	slice := readFileCsv("../data/20000.csv")
 	fmt.Println("\n--- Unsorted --- \n\n", slice)
+	start := time.Now()
 	quicksort(slice)
+	duration := time.Since(start)
 	fmt.Println("\n--- Sorted ---\n\n", slice, "\n")
+	fmt.Println(duration.Nanoseconds())
 }
 
-func readFile(fileName string) []int {
+func readFileCsv(fileName string) []int {
 	data := []int{}
 	f, err := os.Open(fileName)
 	if err != nil {

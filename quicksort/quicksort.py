@@ -1,7 +1,7 @@
 
 import sys
 sys.path.append('..\\')
-print(sys.path)
+import time
 from utils.load_data import readFileCsv
 # Quick sort in Python
 
@@ -47,13 +47,17 @@ def quickSort(array, low, high):
     quickSort(array, pi + 1, high)
 
 # data = [8, 7, 2, 1, 0, 9, 6]
-data = readFileCsv('../data/1000.csv')
+data = readFileCsv('../data/100.csv')
 print("Unsorted Array")
 print(data)
 
 size = len(data)
 
+start = time.time_ns()
 quickSort(data, 0, size - 1)
+end = time.time_ns()
 
 print('Sorted Array in Ascending Order:')
 print(data)
+
+print(f"Time taken is {end - start}ns")

@@ -1,4 +1,4 @@
-package load_data
+package utils
 
 import (
 	"encoding/csv"
@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-func readFile(fileName string) []int {
+func readFileCSV(fileName string) []int {
 	data := []int{}
 	f, err := os.Open(fileName)
 	if err != nil {

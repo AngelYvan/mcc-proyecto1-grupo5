@@ -4,8 +4,10 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
+#include <chrono>
 #include "../utils/load_data.h"
 using namespace std;
+using namespace std::chrono;
 
 // function to swap elements
 void swap(int *a, int *b) {
@@ -71,7 +73,7 @@ void quickSort(int array[], int low, int high) {
 // Driver code
 int main() {
   std::vector<int> numeros;
-  string nombreArchivo = "../data/1000.csv";
+  string nombreArchivo = "../data/4000.csv";
   numeros = readFileCsv(nombreArchivo);
   int longitud = numeros.size();
  
@@ -79,16 +81,19 @@ int main() {
   for (int i = 0; i < longitud; i++) {
       data[i] = numeros[i];
   }
-
-  // int data[] = {8, 7, 6, 1, 0, 9, 2};
   int n = sizeof(data) / sizeof(data[0]);
   
   cout << "Unsorted Array: \n";
   printArray(data, n);
   
-  // perform quicksort on data
+  auto start = high_resolution_clock::now();
   quickSort(data, 0, n - 1);
+  auto stop = high_resolution_clock::now();
   
   cout << "Sorted array in ascending order: \n";
   printArray(data, n);
+
+  auto duration = duration_cast<nanoseconds>(stop - start);
+  cout << "Duration " << duration.count() << endl;
+
 }
