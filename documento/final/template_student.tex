@@ -103,12 +103,6 @@
 	
 
 
-
-	
-	
-
-
-	
 	%\clearpage
 	%\bibliographystyle{apalike}
 	%\bibliographystyle{IEEEtranN}
@@ -144,19 +138,46 @@
 
 
 .
-
-
-
-
-
-
-
-
     \subsection{Quick Sort}
+    
+    
     \subsection{Tree Sort}
     
+     Tree sort es un algoritmo de ordenación que crea un árbol de búsqueda binaria a partir de los elementos que se van a ordenar y luego atraviesa el árbol ( en orden ) para que los elementos aparezcan ordenados. [1] Su uso típico es ordenar elementos en línea 
+     
+     Este ordenamiento trabaja de la siguiente manera:
+     \begin{itemize}
+            \item Compara el valor a almacenar con el primer nodo del árbol, si este es menor al valor del nodo, entonces se evalúa el nodo izquierdo, de lo contrario se evalúa el nodo derecho siguiendo la misma regla hasta no encontrar más nodos que evaluar..
+
+            \item Si el nodo izquierdo o derecho estuvieran vacíos, esa será la posición final del valor, por lo que crearemos un nuevo nodo en esta ubicación y almacenaremos el valor.
+            
+            \item Una vez que todos los valores se encuentran almacenados en sus respectivas posiciones, procedemos a recuperar los valores de cada nodo haciendo un recorrido inorden, el cuál consiste en procesar primero la rama izquierda, luego el valor actual y después la rama derecha de cada nodo.
+    Por ejemplo en la siguiente Figura se observa una demostración de la estructura:
+        
+        \end{itemize}
+        
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{img/treeejem.jpg}
+\caption{Ordenamiento TreeSort}
+\label{fig:QuickSort}
+\end{figure}
+
+\item Complejidad
+
+ \begin{itemize}
+          \item Complejidad temporal en el peor de los casos: $\Theta (n.log n)$  utilizando un árbol de búsqueda binario equilibrado; $\Theta (n^2)$ usando un árbol de búsqueda binario no balanceado.
+           \item Complejidad de tiempo de caso promedio:$\Theta (n.log n)$
+           \item Complejidad del tiempo en el mejor de los casos:$\Theta (n.log n)$
+           \item Complejidad del espacio: $\Theta (n)$
+
+\end{itemize}
+
+    
+    
+    
     \section{Datos del Equipo}
-    Se utilizó un equipo en la nube proporcionado por Replit (www.replit.com) con las siguientes caracteristicas:
+    Se utilizó un equipo en la nube proporcionado por \href{https://replit.com/~}{www.replit.com}, con las siguientes caracteristicas:
 
     \begin{itemize}
         \item 0.5 vCPU con el sistema operativo Ubuntu 21.04-KVM
@@ -217,7 +238,50 @@ Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
 \end{table}
 
 \subsection{Quick Sort}
+
+
 \subsection{Tree Sort}
+Se utilizó el comando time para generar el tiempo de compilacion para cada lenguaje. Todo estos datos fueron almacenados en una libreta Jupyter para posteriormente utilizar la libreria Matplotlib de Python para generar las graficas.
+ Tambien se realizó calculos estadisticos utilizando la liberia Numpy. Los datos fueron almacenados y procesados para su respectiva tabla.
+
+ 
+    \begin{figure}[H] % si la tabla  se va al final cambiar a mayuscula
+        \centering
+        \includegraphics[scale=0.6]{img/treesortcpp.png}
+        \includegraphics[scale=0.6]{img/treesortgo.png}
+        \includegraphics[scale=0.6]{img/treesortpy.png}
+        \caption{Algoritmo Treesort}
+        \label{fig:my_label}
+    \end{figure}
+
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c |}
+\hline
+\multicolumn{7}{ |c| }{Algoritmo TreeSort - Promedios y Desviacion Estandar} \\ \hline
+Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
+100 & 1.203 &0.867 & 0.0348 & 0.03118 & 0.10078 & 0.00295 \\
+1000 & 1.2262 & 0.8704 & 0.0504 & 0.11282 & 0.06405 & 0.01013 \\
+2000 & 1.227 & 0.8776 & 0.095 & 0.11981 & 0.08759 & 0.02387 \\
+3000 & 1.3686 & 0.888 & 0.148 & 0.16048 & 0.13903 &  0.02758 \\
+4000 & 1.0944 & 0.8960 & 0.1756 & 0.315517 & 0.078064 & 0.02364 \\
+5000 & 1.1968 & 0.9738 & 0.1892 &  0.12132 & 0.13485 & 0.02205 \\
+6000 & 1.34 & 1.01 & 0.2488 & 0.157074 & 0.08069 &  0.04511 \\
+7000 & 1.2334 & 1.0976 & 0.2708 & 0.10924 & 0.10596 & 0.06994 \\
+8000 & 1.1072 & 1.114 & 0.3836 & 0.06894 & 0.12673 & 0.03658 \\
+9000 & 1.2449 & 1.125 & 0.4004 & 0.08576 & 0.07631 & 0.02275 \\
+10000 & 1.243 & 1.2344 & 0.47 &  0.11511 & 0.12151 & 0.056922 \\
+20000 & 1.2551 & 1.923 & 0.8286 & 0.06640 & 0.14278 &  0.1019 \\
+30000 & 1.3648 & 2.6802 & 1.4236 &  0.12060 & 0.18089 & 0.117000 \\
+40000 & 1.4124 & 3.5530 & 1.9113 & 0.08527 &  0.27471 & 0.14817 \\
+50000 & 1.629 & 4.3946 & 3.2928  & 0.10534  &  0.31841 & 0.20671 \\ \hline
+\end{tabular}
+\caption{Tiempo de Ejecución TreeSort}
+\label{tab:coches}
+\end{center}
+\end{table}
+
+
 
 \section{Conclusiones}
     \subsection{Merge Sort} 
@@ -230,7 +294,13 @@ Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
     \end{itemize}
 
     \subsection{Quick Sort}
+    
+    
     \subsection{Tree Sort}
-
+\begin{itemize}
+        \item El enguaje C++ cuenta con una ejecución mas rápida (entre 1 a 2 segundos, en comparación a los otros lenguajes) razón por la cual se podria observar variaciones en los tiempos de los datos menores.
+        \item El lenguaje Go cuenta con una elevacion progresiva relacionada que tiene relacion con la complejidad del algoritmo.
+        \item Para el lenguaje Python, este muestra un ligero aumento del tiempo exponencial que en la parte final se podría observar mejor con una mayor cantidad de datos.        
+    \end{itemize}
 
 \end{document}
