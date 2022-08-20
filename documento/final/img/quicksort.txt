@@ -1,0 +1,138 @@
+Resultados en Python
+Para  100  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  1000  numeros
+Desviacion Estandar:  7366072.793558315
+La Media es  5208600.0
+Para  2000  numeros
+Desviacion Estandar:  7365082.811709135
+La Media es  5207900.0
+Para  3000  numeros
+Desviacion Estandar:  7910433.414888775
+La Media es  11032883.333333334
+Para  4000  numeros
+Desviacion Estandar:  6074291.961391239
+La Media es  13432433.333333334
+Para  5000  numeros
+Desviacion Estandar:  7811283.493856109
+La Media es  7811283.333333333
+Para  6000  numeros
+Desviacion Estandar:  411578.6656953389
+La Media es  15808183.333333334
+Para  7000  numeros
+Desviacion Estandar:  8455592.765031647
+La Media es  24004683.333333332
+Para  8000  numeros
+Desviacion Estandar:  10096888.978693167
+La Media es  29220716.666666668
+Para  9000  numeros
+Desviacion Estandar:  7126993.474499297
+La Media es  36872233.333333336
+Para  10000  numeros
+Desviacion Estandar:  7981065.833044412
+La Media es  36869583.333333336
+Para  20000  numeros
+Desviacion Estandar:  11194532.360140026
+La Media es  73487433.33333333
+Para  30000  numeros
+Desviacion Estandar:  8302441.411700671
+La Media es  117625616.66666667
+Para  40000  numeros
+Desviacion Estandar:  14059537.914575603
+La Media es  180275883.33333334
+Para  50000  numeros
+Desviacion Estandar:  12087924.920268804
+La Media es  208779083.33333334
+Resultados en C++
+Para  100  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  1000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  2000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  3000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  4000  numeros
+Desviacion Estandar:  6249200.0
+La Media es  3124600.0
+Para  5000  numeros
+Desviacion Estandar:  6249600.0
+La Media es  3124800.0
+Para  6000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  7000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  8000  numeros
+Desviacion Estandar:  6250400.0
+La Media es  3125200.0
+Para  9000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  10000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  20000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  30000  numeros
+Desviacion Estandar:  8684150.035553278
+La Media es  10390400.0
+Para  40000  numeros
+Desviacion Estandar:  5014864.0260728905
+La Media es  8522000.0
+Para  50000  numeros
+Desviacion Estandar:  489573.52869615
+La Media es  9594600.0
+Resultados en Go
+Para  100  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  1000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  2000  numeros
+Desviacion Estandar:  249215.9673857195
+La Media es  203460.0
+Para  3000  numeros
+Desviacion Estandar:  206604.82085372548
+La Media es  413200.0
+Para  4000  numeros
+Desviacion Estandar:  205822.7450987864
+La Media es  411640.0
+Para  5000  numeros
+Desviacion Estandar:  1175956.2090486193
+La Media es  708880.0
+Para  6000  numeros
+Desviacion Estandar:  2210760.0
+La Media es  1105380.0
+Para  7000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  8000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  9000  numeros
+Desviacion Estandar:  0.0
+La Media es  0.0
+Para  10000  numeros
+Desviacion Estandar:  4012400.0
+La Media es  2006200.0
+Para  20000  numeros
+Desviacion Estandar:  763500.2737393092
+La Media es  1453500.0
+Para  30000  numeros
+Desviacion Estandar:  3338338.6656239657
+La Media es  3901340.0
+Para  40000  numeros
+Desviacion Estandar:  2553783.299812261
+La Media es  5109060.0
+Para  50000  numeros
+Desviacion Estandar:  467291.0930030659
+La Media es  5011120.0

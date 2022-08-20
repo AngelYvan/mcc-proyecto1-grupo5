@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.8.18)  20 AUG 2022 05:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.8.18)  20 AUG 2022 08:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,6 +465,18 @@ LaTeX Warning: Label `fig:my_label' multiply defined.
 
 LaTeX Warning: Label `tab:coches' multiply defined.
 
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `tab:coches' multiply defined.
+
+
+LaTeX Warning: Label `fig:my_label' multiply defined.
+
+
+LaTeX Warning: Label `tab:coches' multiply defined.
+
 )
 \openout1 = `template_student.aux'.
 
@@ -579,7 +591,7 @@ Overfull \hbox (0.89597pt too wide) in paragraph at lines 79--86
 [][] 
  []
 
-<img/logo_unsa.jpg, id=67, 215.8464pt x 74.679pt>
+<img/logo_unsa.jpg, id=75, 215.8464pt x 74.679pt>
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
 Package pdftex.def Info: img/logo_unsa.jpg  used on input line 130.
@@ -587,95 +599,152 @@ Package pdftex.def Info: img/logo_unsa.jpg  used on input line 130.
 [1{C:/Users/yvan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
  <./img/logo_unsa.jpg>]
-<img/treeejem.jpg, id=81, 1112.155pt x 748.7975pt>
+<img/treeejem.jpg, id=89, 1112.155pt x 748.7975pt>
 File: img/treeejem.jpg Graphic file (type jpg)
 <use img/treeejem.jpg>
-Package pdftex.def Info: img/treeejem.jpg  used on input line 159.
+Package pdftex.def Info: img/treeejem.jpg  used on input line 156.
 (pdftex.def)             Requested size: 399.21791pt x 268.78995pt.
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
-Package pdftex.def Info: img/logo_unsa.jpg  used on input line 163.
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 160.
 (pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
  [2]
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
-Package pdftex.def Info: img/logo_unsa.jpg  used on input line 194.
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 179.
 (pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
  [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.194         \item S
-                     e hace 5 pruebas por cada ejecución y se grabaron los ...
+l.179 	E
+        ste algoritmo consiste en almacenar todos los elementos del vector a...
  <./img/treeejem.jpg>]
-<img/finalmerg.png, id=105, 394.47375pt x 837.1275pt>
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 218.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [4]
+<img/finalmerg.png, id=114, 394.47375pt x 837.1275pt>
 File: img/finalmerg.png Graphic file (type png)
 <use img/finalmerg.png>
-Package pdftex.def Info: img/finalmerg.png  used on input line 206.
+Package pdftex.def Info: img/finalmerg.png  used on input line 243.
 (pdftex.def)             Requested size: 236.68607pt x 502.28038pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/treesortcpp.png, id=107, 388.45125pt x 279.0425pt>
-File: img/treesortcpp.png Graphic file (type png)
-<use img/treesortcpp.png>
-Package pdftex.def Info: img/treesortcpp.png  used on input line 248.
-(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
-<img/treesortgo.png, id=108, 388.45125pt x 279.0425pt>
-File: img/treesortgo.png Graphic file (type png)
-<use img/treesortgo.png>
-Package pdftex.def Info: img/treesortgo.png  used on input line 249.
-(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
-<img/treesortpy.png, id=109, 388.45125pt x 279.0425pt>
-File: img/treesortpy.png Graphic file (type png)
-<use img/treesortpy.png>
-Package pdftex.def Info: img/treesortpy.png  used on input line 250.
-(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
-Package pdftex.def Info: img/logo_unsa.jpg  used on input line 254.
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 247.
 (pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
-[4
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.254 
-      ]
-Overfull \vbox (446.19617pt too high) has occurred while \output is active []
-
+ [5]
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
-Package pdftex.def Info: img/logo_unsa.jpg  used on input line 254.
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 274.
 (pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
-
-[5
+ [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.254 
-      
+l.274 
+       <./img/finalmerg.png>]
+<img/treesortcpp.png, id=138, 388.45125pt x 279.0425pt>
+File: img/treesortcpp.png Graphic file (type png)
+<use img/treesortcpp.png>
+Package pdftex.def Info: img/treesortcpp.png  used on input line 282.
+(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
+<img/treesortgo.png, id=139, 388.45125pt x 279.0425pt>
+File: img/treesortgo.png Graphic file (type png)
+<use img/treesortgo.png>
+Package pdftex.def Info: img/treesortgo.png  used on input line 283.
+(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
+<img/treesortpy.png, id=140, 388.45125pt x 279.0425pt>
+File: img/treesortpy.png Graphic file (type png)
+<use img/treesortpy.png>
+Package pdftex.def Info: img/treesortpy.png  used on input line 284.
+(pdftex.def)             Requested size: 233.07254pt x 167.42679pt.
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 288.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [7
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.288 
+      ]
+<img/quicksort_1.png, id=147, 462.528pt x 346.896pt>
+File: img/quicksort_1.png Graphic file (type png)
+<use img/quicksort_1.png>
+Package pdftex.def Info: img/quicksort_1.png  used on input line 319.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 323.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.254 
-       <./img/finalmerg.png> <./img/treesortcpp.png> <./img/treesortgo.png> <./
-img/treesortpy.png>]
+l.323 \newpage
+               <./img/treesortcpp.png> <./img/treesortgo.png> <./img/treesortpy
+.png>]
 File: img/logo_unsa.jpg Graphic file (type jpg)
 <use img/logo_unsa.jpg>
-Package pdftex.def Info: img/logo_unsa.jpg  used on input line 304.
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 323.
 (pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
- [6
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.304 \end{document}
-                    ] (template_student.aux
+l.323 \newpage
+              
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.323 \newpage
+               <./img/quicksort_1.png>]
+<img/heapsort_1.png, id=163, 462.528pt x 346.896pt>
+File: img/heapsort_1.png Graphic file (type png)
+<use img/heapsort_1.png>
+Package pdftex.def Info: img/heapsort_1.png  used on input line 354.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 358.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [10
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.358 \newpage
+              
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.358 \newpage
+               <./img/heapsort_1.png>]
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 408.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [11
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.408 		\end{itemize}
+                     ]
+File: img/logo_unsa.jpg Graphic file (type jpg)
+<use img/logo_unsa.jpg>
+Package pdftex.def Info: img/logo_unsa.jpg  used on input line 416.
+(pdftex.def)             Requested size: 85.35826pt x 29.53262pt.
+ [12] (template_student.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 LaTeX Info: Redefining \. on input line 23.
@@ -684,17 +753,23 @@ LaTeX Info: Redefining \% on input line 23.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `template_student.out' has not changed.
-(rerunfilecheck)             Checksum: AD2C70B6A1C32CB99E06F221D0AD31B9;1865.
+
+Package rerunfilecheck Warning: File `template_student.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `template_student.out':
+(rerunfilecheck)             Before: 73CE3A2B9A4F30A2FAA22B8E524815AD;2077
+(rerunfilecheck)             After:  46A9DDE0316F086522F2230C743F0535;2183.
  ) 
 Here is how much of TeX's memory you used:
- 12444 strings out of 478338
- 200384 string characters out of 2837172
- 541581 words of memory out of 3000000
- 30652 multiletter control sequences out of 15000+600000
+ 12488 strings out of 478338
+ 201018 string characters out of 2837172
+ 542576 words of memory out of 3000000
+ 30676 multiletter control sequences out of 15000+600000
  472181 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,77p,470b,548s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,17n,77p,1166b,543s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\yvan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 000.pk><C:/Users/yvan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/yvan/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -704,9 +779,9 @@ s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yvan/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yvan/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/yvan/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on template_student.pdf (6 pages, 380551 bytes).
+Output written on template_student.pdf (12 pages, 433626 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
