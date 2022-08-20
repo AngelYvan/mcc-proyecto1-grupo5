@@ -32,3 +32,12 @@ vector<int> readFileCsv(string nameFile){
     archivo.close();
   return numeros;
 }
+
+void writeFileCsv(string nameFile, vector<int> vals){
+  ofstream myFile(nameFile);
+  for(int i = 0; i < vals.size(); ++i)
+  {
+      myFile << vals.at(i) << "\n";
+  }
+  myFile.close();
+}

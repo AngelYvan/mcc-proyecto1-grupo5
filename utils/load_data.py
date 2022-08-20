@@ -10,3 +10,9 @@ def readFileCsv(fileName):
         if y != '':
           data.append(int(y))
   return data
+
+def writeFileCsv(fileName, intArray):
+  f = open(fileName, 'w')
+  writer = csv.writer(f, delimiter=';')
+  writer.writerow(intArray)
+  f.close()

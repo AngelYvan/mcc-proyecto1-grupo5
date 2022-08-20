@@ -2,7 +2,7 @@
 import sys
 sys.path.append('..\\')
 import time
-from utils.load_data import readFileCsv
+from utils.load_data import readFileCsv, writeFileCsv
 # Quick sort in Python
 
 # function to find the partition position
@@ -47,17 +47,16 @@ def quickSort(array, low, high):
     quickSort(array, pi + 1, high)
 
 # data = [8, 7, 2, 1, 0, 9, 6]
-data = readFileCsv('../data/100.csv')
-print("Unsorted Array")
-print(data)
+cantidades = [100,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,20000,30000,40000,50000]
 
-size = len(data)
-
-start = time.time_ns()
-quickSort(data, 0, size - 1)
-end = time.time_ns()
-
-print('Sorted Array in Ascending Order:')
-print(data)
-
-print(f"Time taken is {end - start}ns")
+for x in cantidades:
+  tiempos = []
+  for y in range(6):
+    data = readFileCsv('../data/'+str(x)+'.csv')
+    size = len(data)
+    start = time.time_ns()
+    quickSort(data, 0, size - 1)
+    end = time.time_ns()
+    duration = end - start
+    tiempos.append(duration)
+  writeFileCsv('../output/quicksort/python/'+str(x)+'.csv', tiempos)

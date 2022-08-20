@@ -11,13 +11,19 @@ import (
 )
 
 func main() {
-	slice := readFileCsv("../data/20000.csv")
-	fmt.Println("\n--- Unsorted --- \n\n", slice)
-	start := time.Now()
-	quicksort(slice)
-	duration := time.Since(start)
-	fmt.Println("\n--- Sorted ---\n\n", slice, "\n")
-	fmt.Println(duration.Nanoseconds())
+	cantidades := []string{"100","1000","2000","3000","4000","5000","6000","7000","8000","9000","10000","20000","30000","40000","50000"}
+	for i := 0; i < 15; i++ {
+		tiempos := []int{}
+		for j := 0; j < 5; j++ {
+			slice := readFileCsv("../data/"+cantidades[i]+".csv")
+			start := time.Now()
+			quicksort(slice)
+			duration := time.Since(start)
+			durationNano := int(duration.Nanoseconds())
+			tiempos = append(tiempos, durationNano)
+		}
+		writeFileCsv("../output/quicksort/go/"+cantidades[i]+".csv",tiempos)
+	}
 }
 
 func readFileCsv(fileName string) []int {
@@ -49,6 +55,27 @@ func readFileCsv(fileName string) []int {
 		}
 	}
 	return data
+}
+
+func writeFileCsv(fileName string, vals []int){
+	rec, err := os.Create(fileName)
+    defer rec.Close()
+
+    if err != nil {
+		fmt.Println("failed to open file", err)
+    }
+
+    w := csv.NewWriter(rec)
+	w.Comma = ';'
+	
+    defer w.Flush()
+	var valsStr []string
+	for _, i := range vals {
+		valsStr = append(valsStr, strconv.Itoa(i))
+	}
+	if err := w.Write(valsStr); err != nil {
+		fmt.Println("error writing record to file", err)
+	}
 }
 
 func generateSlice(size int) []int {

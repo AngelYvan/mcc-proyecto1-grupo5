@@ -5,7 +5,9 @@
 #include <fstream>
 #include <vector>
 #include <chrono>
+#include <string> 
 #include "../utils/load_data.h"
+#include <typeinfo>
 using namespace std;
 using namespace std::chrono;
 
@@ -72,28 +74,33 @@ void quickSort(int array[], int low, int high) {
 
 // Driver code
 int main() {
-  std::vector<int> numeros;
-  string nombreArchivo = "../data/4000.csv";
-  numeros = readFileCsv(nombreArchivo);
-  int longitud = numeros.size();
- 
-  int data[longitud];
-  for (int i = 0; i < longitud; i++) {
-      data[i] = numeros[i];
-  }
-  int n = sizeof(data) / sizeof(data[0]);
-  
-  cout << "Unsorted Array: \n";
-  printArray(data, n);
-  
-  auto start = high_resolution_clock::now();
-  quickSort(data, 0, n - 1);
-  auto stop = high_resolution_clock::now();
-  
-  cout << "Sorted array in ascending order: \n";
-  printArray(data, n);
+  int cantidades [15]= {100,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,20000,30000,40000,50000};
+  for (size_t i = 0; i < 15; i++)
+  {
+    vector<int> tiempos;
+    for (size_t j = 0; j < 5; j++)
+    {
+      vector<int> numeros;
+      string nombreArchivo = "../data/"+to_string(cantidades[i])+".csv";
+      numeros = readFileCsv(nombreArchivo);
 
-  auto duration = duration_cast<nanoseconds>(stop - start);
-  cout << "Duration " << duration.count() << endl;
+      int longitud = numeros.size();
+      int data[longitud];
+      for (int i = 0; i < longitud; i++) {
+          data[i] = numeros[i];
+      }
+      int n = sizeof(data) / sizeof(data[0]);
+      // cout << "Unsorted Array: \n";
+      // printArray(data, n);
+      auto start = high_resolution_clock::now();
+      quickSort(data, 0, n - 1);
+      auto stop = high_resolution_clock::now();
+      auto duration = duration_cast<nanoseconds>(stop - start);
+      int tiempo = duration.count();
+      tiempos.push_back(tiempo);
+    }
+    string nombreArchivo = "../output/quicksort/cpp/"+to_string(cantidades[i])+".csv";
+    writeFileCsv(nombreArchivo, tiempos);
+  }
 
 }
