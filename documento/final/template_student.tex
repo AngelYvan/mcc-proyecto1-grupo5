@@ -1,0 +1,306 @@
+%package list
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+
+%% \usepackage{cite}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multicol}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\csemail}{vmachacaa@unsa.edu.pe}
+\newcommand{\csdocente}{Vicente Machaca Arceda}
+\newcommand{\cscurso}{Algoritmos y Estructura de Datos}
+\newcommand{\csuniversidad}{Universidad Nacional de San Agustín}
+\newcommand{\csescuela}{Maestría en Ciencia de la Computación}
+\newcommand{\cspracnr}{01}
+\newcommand{\cstema}{--}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_unsa}}}
+\fancyhead[C]{}
+\fancyhead[R]{\fontsize{7}{7}\selectfont	\csuniversidad \\ \csescuela \\ \textbf{\cscurso} }
+\fancyfoot[L]{MSc. Vicente Machaca}
+\fancyfoot[C]{\cscurso}
+\fancyfoot[R]{Página \thepage}
+
+\begin{document}
+	
+	\vspace*{10px}
+	
+	\begin{center}	
+		\fontsize{17}{17} \textbf{ Práctica \cspracnr}
+	\end{center}
+	%\centerline{\textbf{\underline{\Large Título: Informe de revisión del estado del arte}}}
+	%\vspace*{0.5cm}
+	
+
+	\begin{table}[h]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\textbf{DOCENTE} & \textbf{CARRERA}  & \textbf{CURSO}   \\
+			\hline 
+			\csdocente & \csescuela & \cscurso    \\
+			\hline 
+		\end{tabular}
+	\end{table}	
+	
+	
+	\begin{table}[h]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\textbf{PRÁCTICA} & \textbf{TEMA}  & \textbf{DURACIÓN}   \\
+			\hline 
+			\cspracnr & Algoritmos de Ordenamiento & 3 horas   \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	
+	\section{Datos de los estudiantes}
+	\begin{itemize}
+		\item Grupo: V
+		\item Integrantes: 
+		\begin{itemize}
+			\item Angel Yvan Choquehuanca Peraltilla
+			\item Estefany Pilar Huaman Colque
+            \item Eduardo Diaz Huayhuas
+            \item Gustavo Raul Manrique Fernandez
+		\end{itemize}		
+	\end{itemize}
+	
+	
+ 
+	
+
+
+	%\clearpage
+	%\bibliographystyle{apalike}
+	%\bibliographystyle{IEEEtranN}
+	%\bibliography{bibliography}
+		
+
+    \section{Introducción}
+    Se considera un algoritmo de ordenamiento a un conjunto de ordenes que permite que: A un vector o conjunto de datos se le aplique acciones de reordenamiento. Este algoritmo puede ser de diferente tipo de secuencias con el mismo fin. 
+
+    Desde la aparición del primer algoritmo (BubbleSort en 1956), la formulación de algoritmos viene siendo un caso de estudio por cientificos afines a la materia.
+
+    Con el pasar de los años se ha clasificado los algoritmos de acuerdo al metodo de ordenamiento.
+    En este informe se aborda el analisis de tiempo en ejecución de diferentes algoritmos en los lenguajes Python, C++ y Go.
+
+    \section{Marco Teorico}
+    \subsection{Merge Sort}
+    \paragraph{ Concepto}El algoritmo de ordenamiento por mezcla (merge sort en inglés) es un algoritmo de ordenamiento externo estable basado en la técnica divide y vencerás. La idea de los algoritmos de ordenación por mezcla es dividir la matriz por la mitad una y otra vez hasta que cada pieza tenga solo un elemento de longitud. Luego esos elementos se vuelven a juntar (mezclados) en orden de clasificación.
+
+    \paragraph{Ejemplo:}
+    \paragraph{Fase 1:} Para 8 datos
+    \begin{enumerate}
+        \item Comenzamos dividiendo la matriz: [31,4,88,2,4,2,42]
+        \item Dividimos en 2 partes: [31,4,88,1][4,2,42]
+        \item Dividimos en 4 partes: [31,4] [88,1] [4,2] [42] 
+        \item Luego en piezas individuales: [31][4][88][1][4][2][42]
+    \end{enumerate}
+    \paragraph{Fase 2:} Ahora tenemos que unirlos de nuevo en orden de mezcla
+\begin{enumerate}
+    \item Primero fusianamos elementos individuales en pares. Cada par se fusiona en orden de mezcla: [4,31] [1,88] [2,4] [42]
+    \item Luego fusionamos los pares en orden de mezcla: [1,4,31,88] [2,4,42]
+    \item Y luego fusionamos los dos últimos grupos. [1,2,4,4,31,42,88]
+\end{enumerate}    
+
+
+.
+    \subsection{Quick Sort}
+    
+    
+    \subsection{Tree Sort}
+    
+     Tree sort es un algoritmo de ordenación que crea un árbol de búsqueda binaria a partir de los elementos que se van a ordenar y luego atraviesa el árbol ( en orden ) para que los elementos aparezcan ordenados. [1] Su uso típico es ordenar elementos en línea 
+     
+     Este ordenamiento trabaja de la siguiente manera:
+     \begin{itemize}
+            \item Compara el valor a almacenar con el primer nodo del árbol, si este es menor al valor del nodo, entonces se evalúa el nodo izquierdo, de lo contrario se evalúa el nodo derecho siguiendo la misma regla hasta no encontrar más nodos que evaluar..
+
+            \item Si el nodo izquierdo o derecho estuvieran vacíos, esa será la posición final del valor, por lo que crearemos un nuevo nodo en esta ubicación y almacenaremos el valor.
+            
+            \item Una vez que todos los valores se encuentran almacenados en sus respectivas posiciones, procedemos a recuperar los valores de cada nodo haciendo un recorrido inorden, el cuál consiste en procesar primero la rama izquierda, luego el valor actual y después la rama derecha de cada nodo.
+    Por ejemplo en la siguiente Figura se observa una demostración de la estructura:
+        
+        \end{itemize}
+        
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{img/treeejem.jpg}
+\caption{Ordenamiento TreeSort}
+\label{fig:QuickSort}
+\end{figure}
+
+\item Complejidad
+
+ \begin{itemize}
+          \item Complejidad temporal en el peor de los casos: $\Theta (n.log n)$  utilizando un árbol de búsqueda binario equilibrado; $\Theta (n^2)$ usando un árbol de búsqueda binario no balanceado.
+           \item Complejidad de tiempo de caso promedio:$\Theta (n.log n)$
+           \item Complejidad del tiempo en el mejor de los casos:$\Theta (n.log n)$
+           \item Complejidad del espacio: $\Theta (n)$
+
+\end{itemize}
+
+    
+    
+    
+    \section{Datos del Equipo}
+    Se utilizó un equipo en la nube proporcionado por \href{https://replit.com/~}{www.replit.com}, con las siguientes caracteristicas:
+
+    \begin{itemize}
+        \item 0.5 vCPU con el sistema operativo Ubuntu 21.04-KVM
+        \item 1 GB de Memoria RAM
+        \item 1 TB de disco SSD
+    \end{itemize}
+
+    \section{Metodologia y Desarrollo}
+    Para realizar las experiencias tomaron en cuenta los siguientes aspectos:
+    
+    \begin{enumerate}
+        \item Se preparó los datos a partir de un generador de valores en Python mediante la libreria \textit{random}. Estos valores son usados para los 3 lenguajes en su ejecución.
+        \item Se subieron los archivos en la maquina virtual proporcionado por Replit.
+        \item Se preparó el entorno de trabajo separado por carpetas e instalando los compiladores adecuados.
+        \item Se utilizó el comando \textbf{time} de Linux para calcular el tiempo de ejecución real y del sistema.
+        \item Se hace 5 pruebas por cada ejecución y se grabaron los resultados en una tupla en \textit{Google Colab}.
+        \item Se hace uso de la libreria \textbf{MatPlotLib} de Python para la realización de los calculos estadisticos y graficos.
+    \end{enumerate}
+
+\section{Resultados}
+\subsection{Merge Sort} 
+Se utilizó el comando time para generar el tiempo de compilacion para cada lenguaje. Todo estos datos fueron almacenados en una libreta Jupyter para posteriormente utilizar la libreria Matplotlib de Python para generar las graficas.
+ Tambien se realizó calculos estadisticos utilizando la liberia Numpy. Los datos fueron almacenados y procesados para su respectiva tabla.
+
+ 
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.6]{img/finalmerg.png}
+        \caption{Algoritmo MergeSort}
+        \label{fig:my_label}
+    \end{figure}
+
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c |}
+\hline
+\multicolumn{7}{ |c| }{Algoritmo MergeSort - Promedios y Desviacion Estandar} \\ \hline
+Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
+100 & 1.3104 & 1.1484 & 0.0352 & 0.11226 & 0.07171 & 0.00444 \\
+1000 & 1.3082 & 1.1662 & 0.0596 & 0.12914 & 0.03769 & 0.00417 \\
+2000 & 1.217 & 1.1667 & 0.068 & 0.11981 & 0.03166 & 0.00572 \\
+3000 & 1.4224 & 1.176 & 0.118 & 0.07406 & 0.03871 &  0.00993 \\
+4000 & 1.2738 & 1.1868 & 0.1612 & 0.074405 & 0.017982 & 0.00495 \\
+5000 & 1.4022 & 1.2622 & 0.3974 &  0.07954 & 0.01495 & 0.04623 \\
+6000 & 1.23 & 1.27 & 0.4034 & 0.073759 & 0.02530 &  0.01382 \\
+7000 & 1.1724 & 1.2924 & 0.5084 & 0.10504 & 0.01942 & 0.01861 \\
+8000 & 1.3989 & 1.299 & 0.6282 & 0.10770 & 0.02265 & 0.03787 \\
+9000 & 1.2449 & 1.345 & 0.7786 & 0.08257 & 0.02566 & 0.02032 \\
+10000 & 1.525 & 1.6674 & 0.94 &  0.02795 & 0.06302 & 0.048985 \\
+20000 & 1.4105 & 1.545 & 3.4601 & 0.10274 & 0.12826 &  0.1004 \\
+30000 & 1.5076 & 1.8056 & 7.7452 &  0.07759 & 0.05421 & 0.176682 \\
+40000 & 1.5076 & 1.7676 & 13.8876 & 0.07759 &  0.04846 & 0.66075 \\
+50000 & 1.5802 & 1.9802 & 21.6906  & 0.03328  &  0.08478 & 0.71114 \\ \hline
+\end{tabular}
+\caption{Tiempo de Ejecución}
+\label{tab:coches}
+\end{center}
+\end{table}
+
+\subsection{Quick Sort}
+
+
+\subsection{Tree Sort}
+Se utilizó el comando time para generar el tiempo de compilacion para cada lenguaje. Todo estos datos fueron almacenados en una libreta Jupyter para posteriormente utilizar la libreria Matplotlib de Python para generar las graficas.
+ Tambien se realizó calculos estadisticos utilizando la liberia Numpy. Los datos fueron almacenados y procesados para su respectiva tabla.
+
+ 
+    \begin{figure}[H] % si la tabla  se va al final cambiar a mayuscula
+        \centering
+        \includegraphics[scale=0.6]{img/treesortcpp.png}
+        \includegraphics[scale=0.6]{img/treesortgo.png}
+        \includegraphics[scale=0.6]{img/treesortpy.png}
+        \caption{Algoritmo Treesort}
+        \label{fig:my_label}
+    \end{figure}
+
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c |}
+\hline
+\multicolumn{7}{ |c| }{Algoritmo TreeSort - Promedios y Desviacion Estandar} \\ \hline
+Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
+100 & 1.203 &0.867 & 0.0348 & 0.03118 & 0.10078 & 0.00295 \\
+1000 & 1.2262 & 0.8704 & 0.0504 & 0.11282 & 0.06405 & 0.01013 \\
+2000 & 1.227 & 0.8776 & 0.095 & 0.11981 & 0.08759 & 0.02387 \\
+3000 & 1.3686 & 0.888 & 0.148 & 0.16048 & 0.13903 &  0.02758 \\
+4000 & 1.0944 & 0.8960 & 0.1756 & 0.315517 & 0.078064 & 0.02364 \\
+5000 & 1.1968 & 0.9738 & 0.1892 &  0.12132 & 0.13485 & 0.02205 \\
+6000 & 1.34 & 1.01 & 0.2488 & 0.157074 & 0.08069 &  0.04511 \\
+7000 & 1.2334 & 1.0976 & 0.2708 & 0.10924 & 0.10596 & 0.06994 \\
+8000 & 1.1072 & 1.114 & 0.3836 & 0.06894 & 0.12673 & 0.03658 \\
+9000 & 1.2449 & 1.125 & 0.4004 & 0.08576 & 0.07631 & 0.02275 \\
+10000 & 1.243 & 1.2344 & 0.47 &  0.11511 & 0.12151 & 0.056922 \\
+20000 & 1.2551 & 1.923 & 0.8286 & 0.06640 & 0.14278 &  0.1019 \\
+30000 & 1.3648 & 2.6802 & 1.4236 &  0.12060 & 0.18089 & 0.117000 \\
+40000 & 1.4124 & 3.5530 & 1.9113 & 0.08527 &  0.27471 & 0.14817 \\
+50000 & 1.629 & 4.3946 & 3.2928  & 0.10534  &  0.31841 & 0.20671 \\ \hline
+\end{tabular}
+\caption{Tiempo de Ejecución TreeSort}
+\label{tab:coches}
+\end{center}
+\end{table}
+
+
+
+\section{Conclusiones}
+    \subsection{Merge Sort} 
+    \begin{itemize}
+        \item El enguaje C++ utiliza menos tiempo en ejecutar este algoritmo (entre 1 a 2 segundos). Y que, puede ejecutar cargas de millones de datos en tiempos menores. 
+        \item El lenguaje Go utiliza similar tiempo con el C++, pero a su vez tiende a aumentar linealmente su tiempo de ejecución. Ambos lenguajes anteriormente mencionados son derivados del C.
+        \item Para el lenguaje Python, este muestra un aumento del tiempo exponencial. La razon es sencilla: y es que este lenguaje es interpretado, o sea, mientras compila el programa, ejecuta las funciones. Y por tal para algunos procesamientos de millones de datos puede que no sea tan efectivo.
+        \item Interpretando las desviaciones estandar, se tiene que para los lenguajes C++ y Go se tienen variaciones notorias para los analisis de 100 a 10000 datos. En cambio, para Python si se tiene una desviacion estandar bajas debido a que los tiempos de compilacion son altos.
+        
+    \end{itemize}
+
+    \subsection{Quick Sort}
+    
+    
+    \subsection{Tree Sort}
+\begin{itemize}
+        \item El enguaje C++ cuenta con una ejecución mas rápida (entre 1 a 2 segundos, en comparación a los otros lenguajes) razón por la cual se podria observar variaciones en los tiempos de los datos menores.
+        \item El lenguaje Go cuenta con una elevacion progresiva relacionada que tiene relacion con la complejidad del algoritmo.
+        \item Para el lenguaje Python, este muestra un ligero aumento del tiempo exponencial que en la parte final se podría observar mejor con una mayor cantidad de datos.        
+    \end{itemize}
+
+\end{document}
