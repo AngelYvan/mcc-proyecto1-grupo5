@@ -3,7 +3,8 @@
 \usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
-%\usepackage{cite}
+
+%% \usepackage{cite}
 \usepackage{hyperref}
 \usepackage{array}
 \usepackage{multicol}
@@ -121,12 +122,44 @@
 
     Con el pasar de los años se ha clasificado los algoritmos de acuerdo al metodo de ordenamiento.
     En este informe se aborda el analisis de tiempo en ejecución de diferentes algoritmos en los lenguajes Python, C++ y Go.
+
+    \section{Marco Teorico}
+    \subsection{Merge Sort}
+    \paragraph{ Concepto}El algoritmo de ordenamiento por mezcla (merge sort en inglés) es un algoritmo de ordenamiento externo estable basado en la técnica divide y vencerás. La idea de los algoritmos de ordenación por mezcla es dividir la matriz por la mitad una y otra vez hasta que cada pieza tenga solo un elemento de longitud. Luego esos elementos se vuelven a juntar (mezclados) en orden de clasificación.
+
+    \paragraph{Ejemplo:}
+    \paragraph{Fase 1:} Para 8 datos
+    \begin{enumerate}
+        \item Comenzamos dividiendo la matriz: [31,4,88,2,4,2,42]
+        \item Dividimos en 2 partes: [31,4,88,1][4,2,42]
+        \item Dividimos en 4 partes: [31,4] [88,1] [4,2] [42] 
+        \item Luego en piezas individuales: [31][4][88][1][4][2][42]
+    \end{enumerate}
+    \paragraph{Fase 2:} Ahora tenemos que unirlos de nuevo en orden de mezcla
+\begin{enumerate}
+    \item Primero fusianamos elementos individuales en pares. Cada par se fusiona en orden de mezcla: [4,31] [1,88] [2,4] [42]
+    \item Luego fusionamos los pares en orden de mezcla: [1,4,31,88] [2,4,42]
+    \item Y luego fusionamos los dos últimos grupos. [1,2,4,4,31,42,88]
+\end{enumerate}    
+
+
+.
+
+
+
+
+
+
+
+
+    \subsection{Quick Sort}
+    \subsection{Tree Sort}
     
     \section{Datos del Equipo}
     Se utilizó un equipo en la nube proporcionado por Replit (www.replit.com) con las siguientes caracteristicas:
 
     \begin{itemize}
-        \item 0.5vCPU con Ubuntu 21.04-KVM
+        \item 0.5 vCPU con el sistema operativo Ubuntu 21.04-KVM
         \item 1 GB de Memoria RAM
         \item 1 TB de disco SSD
     \end{itemize}
@@ -144,10 +177,14 @@
     \end{enumerate}
 
 \section{Resultados}
-Para MergeSort 
+\subsection{Merge Sort} 
+Se utilizó el comando time para generar el tiempo de compilacion para cada lenguaje. Todo estos datos fueron almacenados en una libreta Jupyter para posteriormente utilizar la libreria Matplotlib de Python para generar las graficas.
+ Tambien se realizó calculos estadisticos utilizando la liberia Numpy. Los datos fueron almacenados y procesados para su respectiva tabla.
+
+ 
     \begin{figure}[h!]
         \centering
-        \includegraphics[scale=0.4]{img/finalmerg.png}
+        \includegraphics[scale=0.6]{img/finalmerg.png}
         \caption{Algoritmo MergeSort}
         \label{fig:my_label}
     \end{figure}
@@ -174,19 +211,26 @@ Datos & C++ (s) & Go (s) & Py (s) &  DE C++ & DE Go & DE Py\\ \hline
 40000 & 1.5076 & 1.7676 & 13.8876 & 0.07759 &  0.04846 & 0.66075 \\
 50000 & 1.5802 & 1.9802 & 21.6906  & 0.03328  &  0.08478 & 0.71114 \\ \hline
 \end{tabular}
-\caption{Tiempo de Ejecución, en segundos}
+\caption{Tiempo de Ejecución}
 \label{tab:coches}
 \end{center}
 \end{table}
 
-
+\subsection{Quick Sort}
+\subsection{Tree Sort}
 
 \section{Conclusiones}
-En MergeSort 
+    \subsection{Merge Sort} 
     \begin{itemize}
         \item El enguaje C++ utiliza menos tiempo en ejecutar este algoritmo (entre 1 a 2 segundos). Y que, puede ejecutar cargas de millones de datos en tiempos menores. 
         \item El lenguaje Go utiliza similar tiempo con el C++, pero a su vez tiende a aumentar linealmente su tiempo de ejecución. Ambos lenguajes anteriormente mencionados son derivados del C.
         \item Para el lenguaje Python, este muestra un aumento del tiempo exponencial. La razon es sencilla: y es que este lenguaje es interpretado, o sea, mientras compila el programa, ejecuta las funciones. Y por tal para algunos procesamientos de millones de datos puede que no sea tan efectivo.
+        \item Interpretando las desviaciones estandar, se tiene que para los lenguajes C++ y Go se tienen variaciones notorias para los analisis de 100 a 10000 datos. En cambio, para Python si se tiene una desviacion estandar bajas debido a que los tiempos de compilacion son altos.
         
     \end{itemize}
+
+    \subsection{Quick Sort}
+    \subsection{Tree Sort}
+
+
 \end{document}
